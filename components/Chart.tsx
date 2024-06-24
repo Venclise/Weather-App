@@ -1,9 +1,8 @@
-// TemperatureChart.jsx
 import React, { useEffect, useRef } from 'react';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 
-const TemperatureChart = ({ hourlyData }) => {
+const Chart = ({ hourlyData }) => {
   const chartRef = useRef(null);
 
   useEffect(() => {
@@ -67,7 +66,7 @@ const TemperatureChart = ({ hourlyData }) => {
         display: false,
       },
       tooltip: {
-        mode: 'index',
+        mode: 'nearest' as any,
         intersect: false,
         callbacks: {
           label: function (tooltipItem) {
@@ -85,9 +84,10 @@ const TemperatureChart = ({ hourlyData }) => {
 
   return (
     <div style={{ width: '100%', height: '50vh' }}>
-      <Line ref={chartRef} data={data} options={options} />
+      <Line ref={chartRef} data={data} 
+        options={options} />
     </div>
   );
 };
 
-export default TemperatureChart;
+export default Chart;
