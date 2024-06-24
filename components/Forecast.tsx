@@ -37,13 +37,15 @@ const Forecast = ({ data }) => {
 
   return (
     <div className="mt-12 p-10 max-sm:p-5">
+      <p className='font-semibold text-3xl m-2 text-gray-700'>Forecast</p>
       {isMobileWidth ? (
         <Swiper
-          slidesPerView={3}
-          spaceBetween={20}
+          slidesPerView={2}
+          spaceBetween={80}
           modules={[Pagination]}
           className="mySwiper"
         >
+          
           {data.forecastday.map((item) => (
             <SwiperSlide key={item.date}>
               <div className="flex items-center flex-col justify-center h-[8rem] w-[8rem] bg-gray-50 border border-gray-200 rounded-lg">
