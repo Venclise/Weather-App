@@ -7,7 +7,7 @@ export const fetchWeatherData = async (latitude, longitude) => {
   try {
     const response = await axios.get('https://api.weatherapi.com/v1/forecast.json', {
       params: {
-        key: '0fd53c3af8e74f7b9d9191551242206',  // Replace with your actual WeatherAPI key
+        key: process.env.NEXT_PUBLIC_WEATHER_API_KEY,  // Replace with your actual WeatherAPI key
         q: `${latitude},${longitude}`,  // Use the latitude and longitude
         days: 7,
         
