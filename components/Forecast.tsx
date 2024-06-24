@@ -40,7 +40,7 @@ const Forecast = ({ data }) => {
       {isMobileWidth ? (
         <Swiper
           slidesPerView={3}
-          spaceBetween={30}
+          spaceBetween={20}
           modules={[Pagination]}
           className="mySwiper"
         >

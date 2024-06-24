@@ -4,13 +4,13 @@ const Header = ({ searchQuery, setSearchQuery, handleSearch }) => {
 
   return (
     <div className="w-full h-[3rem] flex items-center justify-between p-10">
-      <a href="#" className="font-bold max-sm:text-2xl text-gray-700 text-3xl flex items-center gap-1 ">
+      <a href="#" className="font-bold max-sm:text-lg text-gray-700 text-3xl flex items-center gap-1 ">
 <Cloud />
         SkyCast</a>
 
       <form onSubmit={(e) => {   
  e.preventDefault() 
-  handleSearch()}} className="w-max h-[2.5rem] border border-gray-100 pl-2 pr-2 rounded-md">
+  handleSearch()}} className="w-max max-sm:w-[12rem] flex items-center h-[2.5rem] border border-gray-100 pl-2 pr-2 rounded-md">
         <input type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
